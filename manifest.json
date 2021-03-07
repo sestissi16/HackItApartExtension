@@ -29,6 +29,11 @@
     "tabs",
     "identity"
   ],
+"permissions": [ "identity" ],
+"oauth2": {
+  "client_id": "585638251270-vqna5e2sm7kcs0gi3aluipifvcp182sa.apps.googleusercontent.com",
+  "scopes": ["https://www.googleapis.com/auth/userinfo.email"]
+},
   "content_scripts": [
     {
       "matches": [
