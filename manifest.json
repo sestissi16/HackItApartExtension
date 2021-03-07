@@ -10,10 +10,7 @@
   },
   "default_locale": "en",
   "background": {
-    "scripts": [
-		"./background.js"
-		],
-		"persistent": false
+    "service_worker": "background.js"
   }
   "options_page": "src/options_custom/index.html",
   "action": {
