@@ -1,4 +1,14 @@
 // Get reference to background page.
-const bgPage = chrome.extension.getBackgroundPage();
-// Sign in with popup, typically attached to a button click.
-bgPage.signInWithPopup();
+    const provider = new firebase.auth.GoogleAuthProvider();
+      const signinButton = document.querySelector("#signin");
+      signinButton.addEventListener("click", () =>
+        firebase
+          .auth()
+          .signInWithPopup(provider)
+          .then(function (result) {
+            console.log("result", result);
+          })
+          .catch(function (error) {
+            console.error(error);
+          })
+      );
