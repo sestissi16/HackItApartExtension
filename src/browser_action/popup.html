@@ -44,7 +44,21 @@ div:hover {
     <h4>Sign-In With Your Google Account to Use This Extension</h4>
     <div id='sign-in'>Sign In</div>
     <button>User Status</button>
-    <script src="src/browser_action/popup.js"></script>
+    //<script src="src/browser_action/popup.js"></script>
+    <script>
+      const provider = new firebase.auth.GoogleAuthProvider();
+      const signinButton = document.querySelector("#signin");
+      signinButton.addEventListener("click", () =>
+        firebase
+          .auth()
+          .signInWithPopup(provider)
+          .then(function (result) {
+            console.log("result", result);
+          })
+          .catch(function (error) {
+            console.error(error);
+          })
+      );
+    </script>
 </body>
-<script src="src/browser_action/popup.js"></script>
 </html>
