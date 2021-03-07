@@ -29,7 +29,7 @@
     "tabs",
     "identity"
   ],
-  "content_security_policy":"script-src 'self' https://ssl-gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'",
+  "content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'",
   "oauth2": {
     "client_id": "<585638251270-vqna5e2sm7kcs0gi3aluipifvcp182sa.apps.googleusercontent.com>",
     "scopes": [
