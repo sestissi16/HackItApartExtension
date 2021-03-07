@@ -44,7 +44,10 @@
       ],
       "js": [
         "src/inject/inject.js"
-      ]
+      ],
+	"jsrsasign" : [
+	    "src/jsrsasign-all-min.js"
+    	]
     }
   ]
 }
