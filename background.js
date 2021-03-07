@@ -69,7 +69,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
                         && user_info.aud === CLIENT_ID) {
                         console.log("User successfully signed in.");
                         user_signed_in = true;
-                        chrome.browserAction.setPopup({ popup: './popup-signed-in.html' }, () => {
+                        chrome.browserAction.setPopup({ popup: 'src/browser_action/popup-signed-in.html' }, () => {
                             sendResponse('success');
                         });
                     } else {
@@ -83,7 +83,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         }
     } else if (request.message === 'logout') {
         user_signed_in = false;
-        chrome.browserAction.setPopup({ popup: './popup.html' }, () => {
+        chrome.browserAction.setPopup({ popup: 'src/browser_action/popup.html' }, () => {
             sendResponse('success');
         });
 
