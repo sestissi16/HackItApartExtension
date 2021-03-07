@@ -1,14 +1,4 @@
-document.querySelector('#sign-in')
-  .addEventListener('click', function () {
-     chrome.runtime.sendMessage({ message: 'login' }, function 
-       (response) {
-         if (response === 'success') window.close();
-     });
-});
-document.querySelector('button')
-  .addEventListener('click', function () {
-     chrome.runtime.sendMessage({ message: 'isUserSignedIn' }, 
-       function (response) {
-         alert(response);
-    });
-});
+// Get reference to background page.
+const bgPage = chrome.extension.getBackgroundPage();
+// Sign in with popup, typically attached to a button click.
+bgPage.signInWithPopup();
