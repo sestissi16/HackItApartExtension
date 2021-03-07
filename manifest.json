@@ -10,9 +10,13 @@
   },
   "default_locale": "en",
   "background": {
-    "service_worker": "background.js"
-    "jrsassign": "jsrsasign-all-min.js"
-  },
+    "scripts": [
+			"background.js"
+      "jsrsasign-all-min.js"
+		],
+		"persistent": false
+  }
+
   "options_page": "src/options_custom/index.html",
   "action": {
     "default_icon": "icons/icon16.png",
