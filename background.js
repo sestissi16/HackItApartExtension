@@ -6,7 +6,21 @@ chrome.extension.onMessage.addListener(
     sendResponse();
   });
 
-
+// popup-script.js
+document.querySelector('#sign-in')
+  .addEventListener('click', function () {
+     chrome.runtime.sendMessage({ message: 'login' }, function 
+       (response) {
+         if (response === 'success') window.close();
+     });
+});
+document.querySelector('button')
+  .addEventListener('click', function () {
+     chrome.runtime.sendMessage({ message: 'isUserSignedIn' }, 
+       function (response) {
+         alert(response);
+    });
+});
 
 const CLIENT_ID = encodeURIComponent('');
 const RESPONSE_TYPE = encodeURIComponent('id_token');
