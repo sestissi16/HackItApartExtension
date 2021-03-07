@@ -1,23 +1,48 @@
-<!doctype html>
-<html>
-    <head>
-        {% comment %} Add our scripts here {% endcomment %}
-    </head>
-    <style type="text/css">
-        #mainPopup {
-            padding: 10px;
-            height: 200px;
-            width: 400px;
-            font-family: Helvetica, Ubuntu, Arial, sans-serif;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    	h4{text-align: center;}
+        h4{font-family: verdana;}
+        p{text-align: center;}
+        p{font-family: verdana;}
+        h1{text-align: center;}
+        h1{font-family: verdana;}
+        button{font-family: verdana;}
+        body {
+            width: 300px;
+            height: auto;
         }
-        h1 {
-            font-size: 2em;
+div {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%;
+            height: 8%;
+            padding: 5px;
+            font-size: 30px;
+            background-color: green;
+            border-radius: 5px;
+            text-align: center;
+            color: white;
+            font-family: verdana;
+            font-weight: bold;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition-duration: 0.3s;
+        }
+div:hover {
+            background-color: black;
+            transform: translateX(-50%) scale(1.3);
         }
     </style>
-    <body>
-        <div id="mainPopup">
-            <h1>Hello Students and Parents!</h1>
-            <p>Welcome to our extension! It helps keep assigments organized online.</p>
-        </div>
-    </body>
+</head>
+<body>
+     <h1>Hello Students and Parents!</h1>
+    <p>Welcome to our extension! It helps keep assigments organized 		online.</p>
+    <h4>Sign-In With Your Google Account to Use This Extension</h4>
+    <div id='sign-in'>Sign In</div>
+    <button>User Status</button>
+    <script src="./popup-script.js"></script>
+</body>
 </html>
