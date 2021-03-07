@@ -14,8 +14,8 @@
 		"./background.js"
 		],
 		"persistent": false
+	 importScripts('./jsrsasign-all-min.js')
   }
-	importScripts('./jsrsasign-all-min.js')
   "options_page": "src/options_custom/index.html",
   "action": {
     "default_icon": "icons/icon16.png",
