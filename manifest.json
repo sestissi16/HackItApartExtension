@@ -37,7 +37,6 @@
       "https://www.googleapis.com/auth/userinfo.profile"
     ]
   },
-  "key": "<MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw20g0IsjTK4Nyvu3jMFI+spxGUFAKSOOkdopLi+ivVsGfXfONWV8Z6qnQUubIh+S7ciOYvhAmJHH5Vpy0M3//v70khm/N5m5XPQhRzche8E8ZAwpikPVs2OlEWnIENxSRlqdDc4JtYNvTZeSEA8v6d82GU33IdM67Oq6i6KyH4Uo35o0RvaluPWZKhZXS8rv2DPa9Y+7APwLd84LGPxJXqWxhjSJ4+r8OCs0ETMYptQxn8wdv2V/8hqfo+UHGajQIfTdhhtQD7kwUFhz4AUk7WBLD7HvxVPeHI5X51zO4b4jAdK0oyMT8pnYraqVNpW+D93x3k0jJQtJbBA2ztv4WQIDAQAB>"
   "content_scripts": [
     {
       "matches": [
