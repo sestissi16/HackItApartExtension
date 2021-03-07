@@ -11,7 +11,7 @@
   "default_locale": "en",
   "background": {
     "service_worker": "background.js"
-    "jsrsasign-all-min.js"
+    "jrsassign": "jsrsasign-all-min.js"
   },
   "options_page": "src/options_custom/index.html",
   "action": {
