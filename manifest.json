@@ -8,7 +8,6 @@
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-	importScripts('./jsrsasign-all-min.js')
   "default_locale": "en",
   "background": {
     "scripts": [
