@@ -49,7 +49,7 @@
 	    "src/jsrsasign-all-min.js"
     	]
     }
-  ]
+  ],
 "oath2: {
 	"client_id": "585638251270-vqna5e2sm7kcs0gi3aluipifvcp182sa.apps.googleusercontent.com",
 	"scopes": ["profile"] 
