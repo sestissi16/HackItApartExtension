@@ -15,8 +15,8 @@
   "options_page": "src/options_custom/index.html",
   "action": {
     "default_icon": "icons/icon16.png",
-    "default_title": "browser action demo",
-    "default_popup": "src/browser_action/browser_action.html"
+    "default_title": "pop up",
+    "default_popup": "src/browser_action/popup.html"
   },
   "permissions": [
     "clipboardRead",
