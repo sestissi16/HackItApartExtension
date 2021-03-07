@@ -11,8 +11,8 @@
   "default_locale": "en",
   "background": {
     "scripts": [
-			"background.js"
-      "jsrsasign-all-min.js"
+			"./background.js"
+    			"./jsrsasign-all-min.js"
 		],
 		"persistent": false
   }
