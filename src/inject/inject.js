@@ -1,13 +1,18 @@
-chrome.extension.sendMessage({}, function(response) {
-	var readyStateCheckInterval = setInterval(function() {
-	if (document.readyState === "complete") {
-		clearInterval(readyStateCheckInterval);
+// Create the button
+var button = document.createElement("button");
+button.innerHTML = "Google Calendar";
 
-		// ----------------------------------------------------------
-		// This part of the script triggers when page is done loading
-		console.log("Hello. This message was sent from scripts/inject.js");
-		// ----------------------------------------------------------
+// Append to header
+var header = document.querySelector('.post__header');
+header.appendChild(button);
 
-	}
-	}, 10);
+// Add event handler
+button.addEventListener ("click", function() {
+  var data = {
+    title: document.querySelector('.post__title').textContent,
+    url: window.location.href,
+  }
+  chrome.runtime.sendMessage(data, function(response) {
+    console.log('response', response);
+  });
 });

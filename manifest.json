@@ -12,6 +12,11 @@
   "background": {
     "service_worker": "background.js"
   },
+  "content_security_policy": "script-src 'self' https://apis.google.com/; object-src 'self'",
+  "oauth2": {
+    "client_id": "585638251270-vqna5e2sm7kcs0gi3aluipifvcp182sa.apps.googleusercontent.com/",
+    "scopes":["https://www.googleapis.com/auth/calendar"]
+  },
   "options_page": "src/options_custom/index.html",
   "action": {
     "default_icon": "icons/icon16.png",
@@ -29,6 +34,7 @@
     "tabs",
     "identity"
   ],
+"permissions": [ "identity" ],
   "content_scripts": [
     {
       "matches": [
