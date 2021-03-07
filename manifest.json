@@ -10,8 +10,7 @@
   },
   "default_locale": "en",
   "background": {
-    "service_worker": "src/bg/background.html",
-    "persistent": true
+    "service_worker": "src/bg/background.html"
   },
   "options_page": "src/options_custom/index.html",
   "browser_action": {
