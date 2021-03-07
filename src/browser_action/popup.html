@@ -37,20 +37,27 @@ div:hover {
         }
     </style>
 </head>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
 <body>
-     <h1>Hello Students and Parents!</h1>
-    <p>Welcome to our extension! It helps keep assigments organized 		online.</p>
+    <h1>Hello Students and Parents!</h1>
+    <p>Welcome to our extension! It helps keep assigments organized online.</p>
     <h4>Sign-In With Your Google Account to Use This Extension</h4>
     <div id='sign-in'>Sign In</div>
     <button>User Status</button>
-    <script src="src/browser_action/popup-script.js"></script>
+    <script>
+      const provider = new firebase.auth.GoogleAuthProvider();
+      const signinButton = document.querySelector("#signin");
+      signinButton.addEventListener("click", () =>
+        firebase
+          .auth()
+          .signInWithPopup(provider)
+          .then(function (result) {
+            console.log("result", result);
+          })
+          .catch(function (error) {
+            console.error(error);
+          })
+      );
+    </script>
 </body>
-    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase.js"></script>
-<script>
-  var config = {
-    apiKey: "AIzaSyAhF3H4rKcCT2RnCN98BgQblfzor5YlhgM",
-    authDomain: "assignment-tracker-hackitapart.firebaseapp.com",
-  };
-  firebase.initializeApp(config);
-</script>
 </html>
