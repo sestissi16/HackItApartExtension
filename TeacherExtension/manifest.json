@@ -1,0 +1,60 @@
+{
+  "name": "Assignment Tracker",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "description": "This extension helps keep kids on track by sharing assignment info and organizing their schedule",
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "src/options_custom/index.html",
+  "action": {
+    "default_icon": "icons/icon16.png",
+    "default_title": "pop up",
+    "default_popup": "src/browser_action/popup.html"
+  },
+  "permissions": [
+    "clipboardRead",
+    "clipboardWrite",
+    "contentSettings",
+    "cookies",
+    "tts",
+    "ttsEngine",
+    "notifications",
+    "tabs",
+    "identity"
+  ],
+  "content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'",
+  "oauth2": {
+    "client_id": "<585638251270-vqna5e2sm7kcs0gi3aluipifvcp182sa.apps.googleusercontent.com>",
+    "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/userinfo.profile"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com/*"
+      ],
+      "css": [
+        "src/inject/inject.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.google.com/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ],
+	"jsrsasign" : [
+	    "src/jsrsasign-all-min.js"
+    	]
+    }
+  ]
+}
